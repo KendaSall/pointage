@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                layout:decorate="template1">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire Professeurs</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.1/css/bootstrap.min.css">
+</head>
+<body>
+<div layout:fragment="content1">
+    <div class="col-md-6 offset-3 mt-4">
+        <form method="get" th:action="@{save}">
+            <div class="mb-3 mt-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="text" class="form-control" id="id" name="id" th:value="${professeur.id}">
+                <span th:errors="${professeur.id}"></span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" name="nom" th:value="${professeur.nom}">
+                <span th:errors="${professeur.nom}"></span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="prenom" class="form-label">Prenom</label>
+                <input type="text" class="form-control" id="prenom" name="prenom" th:value="${professeur.prenom}">
+                <span th:errors="${professeur.prenom}"></span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" th:value="${professeur.email}">
+                <span th:errors="${professeur.email}"></span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" th:value="${professeur.password}">
+                <span th:errors="${professeur.password}"></span>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="etat" class="form-label">Etat</label>
+                <input type="" class="form-control" id="etat" name="etat" th:value="${professeur.etat}">
+                <span th:errors="${professeur.etat}"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

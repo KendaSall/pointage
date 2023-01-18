@@ -50,4 +50,11 @@ public class ProfesseurController {
        professeurRepository.save(professeur);
         return "redirect:/index";
     }
+    @GetMapping("/editProfesseur")
+    public String editProfesseur(Model model, Long id){
+        Professeur professeur=professeurRepository.findById(id).orElse(null);
+        if(professeur==null) throw new RuntimeException("Professeur introuvable");
+        model.addAttribute("professeur",professeur);
+        return "editProfesseur";
+    }
 }

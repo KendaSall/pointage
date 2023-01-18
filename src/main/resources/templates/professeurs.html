@@ -39,7 +39,7 @@
                             <a onclick="return confirm('Etes vous sure ?')"  class="btn btn-danger" th:href="@{delete(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
                                 Supprimer
                             </a>
-                            <a class="btn btn-primary" th:href="@{/formProfesseurs}">
+                            <a class="btn btn-primary" th:href="@{editProfesseur(id=${p.id}, keyword=${keyword}, page=${currentPage} )}">
                                 Editer
                             </a>
                         </td>
