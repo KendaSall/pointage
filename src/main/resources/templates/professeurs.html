@@ -21,7 +21,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>ID</th><th>Nom</th><th>Prenom</th><th>Email</th><th>Password</th><th>Etat</th>
+                        <th>ID</th><th>Nom</th><th>Prenom</th><th>Email</th><th>Password</th><th>Etat</th><th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,7 +30,7 @@
                         <td th:text="${p.nom}"></td>
                         <td th:text="${p.prenom}"></td>
                         <td th:text="${p.email}"></td>
-                        <td th:text="${p.password}"></td>S
+                        <td th:text="${p.password}"></td>
                         <td th:text="${p.etat}"></td>
                         <td>
                             <a class="btn btn-success" th:href="@{/formProfesseurs}">
